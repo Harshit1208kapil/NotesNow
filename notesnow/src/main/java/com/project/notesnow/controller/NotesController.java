@@ -45,7 +45,11 @@ public class NotesController {
 
     @PatchMapping("/notes/{id}")
     public ResponseEntity<NotesDto> updatePartial (@PathVariable Long id, @RequestBody Map<String, Object> updates){
+<<<<<<< HEAD
         return ResponseEntity.status(HttpStatus.OK).body(notesService.updatePartial (id, updates));
+=======
+        return ResponseEntity.ok(notesService.updatePartial (id, updates));
+>>>>>>> fce19c064da9224a8541da43785beaf1244dec04
     }
 
     @DeleteMapping("/notes/{id}")
